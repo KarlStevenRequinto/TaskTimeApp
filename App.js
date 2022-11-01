@@ -2,18 +2,18 @@ import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Focus from "./src/features/Focus";
+import Timer from "./src/features/Timer";
 
 export default function App() {
-  const [focusSubject, setFocusSubject] = useState(null);
+  const [focusSubject, setFocusSubject] = useState("asdasdasd");
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       {focusSubject ? (
-        <Text>merong timer</Text>
+        <Timer focusSubject={focusSubject} />
       ) : (
         <Focus addSubject={setFocusSubject} />
       )}
-      <Text style={{ color: "red" }}>{focusSubject}</Text>
     </View>
   );
 }
@@ -22,5 +22,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    paddingTop: 20,
   },
 });
