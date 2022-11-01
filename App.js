@@ -8,7 +8,12 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      {focusSubject ? <Text>merong timer</Text> : <Focus />}
+      {focusSubject ? (
+        <Text>merong timer</Text>
+      ) : (
+        <Focus addSubject={setFocusSubject} />
+      )}
+      <Text style={{ color: "red" }}>{focusSubject}</Text>
     </View>
   );
 }
