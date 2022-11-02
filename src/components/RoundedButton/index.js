@@ -30,7 +30,7 @@ const styles = (size) =>
       justifyContent: "center",
     },
     text: {
-      fontSize: size / 3,
+      fontSize: 12,
       color: "red",
     },
   });
