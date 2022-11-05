@@ -1,5 +1,6 @@
 import React from "react";
 import { View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { GlobalStyles } from "../../globalstyles/globalStyles";
 
 const RoundedButton = ({
   style,
@@ -25,12 +26,12 @@ const styles = (size) =>
       alignItems: "center",
       width: size,
       height: size,
-      borderColor: "red",
-      borderWidth: 2,
+      borderColor: GlobalStyles.Colors.shade4,
+      borderWidth: 3,
       justifyContent: "center",
     },
     text: {
-      fontSize: 12,
-      color: "red",
+      fontSize: size / 4,
+      color: GlobalStyles.Colors.shade4,
     },
   });
